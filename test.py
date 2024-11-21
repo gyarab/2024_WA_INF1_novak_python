@@ -1,5 +1,3 @@
-import os
-
 def fibonacci(n):
   if not isinstance(n, int) or n < 0:
     raise ValueError("n must be a non-negative integer")
@@ -22,5 +20,3 @@ def fahrenheit_to_celsius(fahrenheit):
   return (fahrenheit - 32) * 5/9
 
 print(fibonacci(6))
-
-os.system('start cmd')
