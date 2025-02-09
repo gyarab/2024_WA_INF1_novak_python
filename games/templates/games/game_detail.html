@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+<h2>{{ game.name }}</h2>
+<p>{{ game.description }}</p>
+<p>Price: ${{ game.price }}</p>
+<p>Publisher: {{ game.publisher }}</p>
+
+{% if game.image %}
+<img src="{{ game.image.url }}" width="300px" />
+{% endif %}
+
+<h3>Categories:</h3>
+<ul>
+  {% for category in game.categories.all %}
+  <li>{{ category.name }}</li>
+  {% endfor %}
+</ul>
+
+{% if user == game.publisher %}
+<a href="{% url 'edit_game' game.slug %}">Edit</a> |
+<a href="{% url 'delete_game' game.slug %}">Delete</a>
+{% endif %}
+
+<a href="{% url 'game_list' %}">Back to Games</a>
+{% endblock %}

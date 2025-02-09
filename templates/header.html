@@ -1,0 +1,53 @@
+<header class="p-3 bg-light shadow-sm">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Brand</a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          {% with request.resolver_match.url_name as url_name %}
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link {% if url_name == 'home' %}active{% endif %}"
+                href="{% url 'home' %}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if url_name == 'game_list' %}active{% endif %}"
+                href="{% url 'game_list' %}"
+                >Games</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else</a></li>
+              </ul>
+            </li>
+          </ul>
+          {% endwith %}
+          <div class="d-flex">
+            <a href="{% url 'login' %}" class="btn btn-outline-primary me-2"
+              >Login</a
+            >
+            <a href="{% url 'register' %}" class="btn btn-primary">Sign-up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

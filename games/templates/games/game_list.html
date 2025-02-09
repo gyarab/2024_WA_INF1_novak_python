@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Games</h2>
+<a href="{% url 'add_game' %}">Add Game</a>
+<ul>
+  {% for game in games %}
+  <li>
+    <a href="{% url 'game_detail' game.slug %}">{{ game.name }}</a>
+    -
+    <span>{{ game.publisher }}</span>
+    {% if user == game.publisher %}
+    <a href="{% url 'edit_game' game.slug %}">Edit</a> |
+    <a href="{% url 'delete_game' game.slug %}">Delete</a>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

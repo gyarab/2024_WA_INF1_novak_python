@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+      <h1 class="display-4">Welcome to My Game Database</h1>
+      <p class="lead">
+        Discover and explore a variety of games. Read reviews, see details, and
+        much more!
+      </p>
+      <hr class="my-4" />
+      <p class="lead">
+        <a
+          class="btn btn-primary btn-lg"
+          href="{% url 'game_list' %}"
+          role="button"
+          >Explore Games</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <h2 class="text-center mt-5">Featured Games</h2>
+
+  <div class="row">
+    {% for game in featured_games %}
+    <div class="col-md-4">{% include 'core/game_card.html' %}</div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
