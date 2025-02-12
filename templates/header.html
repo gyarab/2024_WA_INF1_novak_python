@@ -18,9 +18,18 @@
               <a
                 class="nav-link {% if url_name == 'game_list' %}active{% endif %}"
                 href="{% url 'game_list' %}"
-                >Games</a
+                >All Games</a
               >
             </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a
+                class="nav-link {% if url_name == 'game_list_by_publisher' %}active{% endif %}"
+                href="{% url 'game_list_by_publisher' %}"
+                >My Games</a
+              >
+            </li>
+            {% endif %}
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -39,13 +48,20 @@
               </ul>
             </li>
           </ul>
-          {% endwith %}
+          {% endwith %} {% if user.is_authenticated %}
+          <div class="d-flex">
+            <a href="{% url 'profile' %}" class="btn btn-outline-primary me-2">
+              Profile
+            </a>
+          </div>
+          {% else %}
           <div class="d-flex">
             <a href="{% url 'login' %}" class="btn btn-outline-primary me-2"
               >Login</a
             >
             <a href="{% url 'register' %}" class="btn btn-primary">Sign-up</a>
           </div>
+          {% endif %}
         </div>
       </div>
     </nav>

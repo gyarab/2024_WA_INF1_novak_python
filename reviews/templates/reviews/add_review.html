@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% block content %}
+<h4>Add a Review</h4>
+<form method="POST" action="{% url 'add_review' game.slug %}">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" class="btn btn-success">Submit Review</button>
+</form>
+{% endblock %}

@@ -15,7 +15,45 @@
   {% endfor %}
 </ul>
 
-{% if user == game.publisher %}
+<h3 class="mt-5">User Reviews</h3>
+
+<!-- Add Review Button -->
+<a href="{% url 'add_review' game.slug %}" class="btn btn-success mb-3"
+  >Write a Review</a
+>
+
+{% if game.reviews.all %}
+<div class="row">
+  {% for review in game.reviews.all %}
+  <div class="col-md-6 mb-4">
+    <div class="card shadow-sm border-0 h-100">
+      <div class="card-body">
+        <h5 class="card-title">{{ review.user }}</h5>
+        <p class="card-text text-muted">
+          {{ review.created_at|date:"F j, Y" }}
+        </p>
+
+        <p class="text-warning mb-2">
+          {% for _ in "★★★★★"|slice:review.rating %} ⭐ {% endfor %}
+        </p>
+
+        <p class="card-text">"{{ review.content }}"</p>
+
+        {% if review.user == request.user %}
+        <a
+          href="{% url 'delete_review' review.id %}"
+          class="btn btn-danger btn-sm"
+          >Delete</a
+        >
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p class="text-muted">No reviews yet. Be the first to review this game!</p>
+{% endif %} {% if user == game.publisher %}
 <a href="{% url 'edit_game' game.slug %}">Edit</a> |
 <a href="{% url 'delete_game' game.slug %}">Delete</a>
 {% endif %}

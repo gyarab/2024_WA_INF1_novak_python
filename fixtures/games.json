@@ -1,0 +1,81 @@
+[
+  { "model": "games.category", "pk": 1, "fields": { "name": "Platformer" } },
+  { "model": "games.category", "pk": 2, "fields": { "name": "Shooter" } },
+  { "model": "games.category", "pk": 3, "fields": { "name": "RPG" } },
+  { "model": "games.category", "pk": 4, "fields": { "name": "MOBA" } },
+  {
+    "model": "games.game",
+    "pk": 1,
+    "fields": {
+      "name": "Celeste",
+      "description": "The Best Game Ever!!!",
+      "price": "19.90",
+      "download_count": 12000,
+      "publisher": 1,
+      "release_date": "2025-02-10T09:28:44.924Z",
+      "image": "game_images/Screenshot_6.png",
+      "slug": "celeste",
+      "categories": [1]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 2,
+    "fields": {
+      "name": "CS:GO",
+      "description": "Great game",
+      "price": "0.00",
+      "download_count": 0,
+      "publisher": 2,
+      "release_date": "2025-02-10T12:49:04.714Z",
+      "image": "game_images/Screenshot_2.png",
+      "slug": "csgo",
+      "categories": [1]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 3,
+    "fields": {
+      "name": "New Game",
+      "description": "New game description - lorem ipsum dolor a mit\r\nSomething else blah blah blah",
+      "price": "59.90",
+      "download_count": 25670,
+      "publisher": 2,
+      "release_date": "2025-02-11T07:01:01.198Z",
+      "image": "game_images/Screenshot_1.png",
+      "slug": "new-game",
+      "categories": [1]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 4,
+    "fields": {
+      "name": "Google",
+      "description": "asdfsadfasdfasfd",
+      "price": "0.00",
+      "download_count": 1,
+      "publisher": 2,
+      "release_date": "2025-02-11T07:22:35.858Z",
+      "image": "game_images/Screenshot_5.png",
+      "slug": "google",
+      "categories": [2, 3, 4]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 5,
+    "fields": {
+      "name": "Gymnazium, Arabska, 14",
+      "description": "asdfsadfsa",
+      "price": "0.00",
+      "download_count": 10000,
+      "publisher": 2,
+      "release_date": "2025-02-11T09:29:02.365Z",
+      "image": "game_images/Screenshot_5_ZvBsSZP.png",
+      "slug": "gymnazium-arabska-14",
+      "categories": [1, 3]
+    }
+  }
+]

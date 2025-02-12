@@ -1,17 +1,16 @@
 from django.db import models
-from users.models import User
 from games.models import Game
+from users.models import User
 
 class GameReview(models.Model):
-    game = models.ForeignKey(Game, on_delete=models.CASCADE)
+    game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name="reviews")
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
-    rating = models.PositiveIntegerField()
+    rating = models.IntegerField(choices=[(i, str(i)) for i in range(1, 6)])
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Review of {self.game.name} by {self.user.username}"
-    
-    def save(self, *args, **kwargs):
-        if not (1 <= self.rating <= 10):
-            raise ValueError("Rating must be between 1 and 10")
-        super().save(*args, **kwargs)
+        return f"Review by {self.user} for {self.game.name} - {self.rating} Stars"
+
+    class Meta:
+        ordering = ['-created_at']
