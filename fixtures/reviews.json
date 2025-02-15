@@ -42,16 +42,5 @@
       "rating": 1,
       "created_at": "2025-02-11T07:23:04.075Z"
     }
-  },
-  {
-    "model": "reviews.gamereview",
-    "pk": 6,
-    "fields": {
-      "game": 2,
-      "user": 2,
-      "content": "The best game ever !!!!",
-      "rating": 2,
-      "created_at": "2025-02-11T09:28:13.050Z"
-    }
   }
 ]

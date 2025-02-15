@@ -1,5 +1,8 @@
-.venv
-
+*.log
+*.pot
+__pycache__
+*.pyc
+*.pyo
 db.sqlite3
-
-# media/
+# media
+.venv
