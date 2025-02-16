@@ -1,81 +1,170 @@
 [
-  { "model": "games.category", "pk": 1, "fields": { "name": "Platformer" } },
-  { "model": "games.category", "pk": 2, "fields": { "name": "Shooter" } },
-  { "model": "games.category", "pk": 3, "fields": { "name": "RPG" } },
-  { "model": "games.category", "pk": 4, "fields": { "name": "MOBA" } },
+  {
+    "model": "games.category",
+    "pk": 1,
+    "fields": { "name": "Precision Platformer" }
+  },
+  { "model": "games.category", "pk": 2, "fields": { "name": "Destruction" } },
+  { "model": "games.category", "pk": 3, "fields": { "name": "Difficult" } },
+  { "model": "games.category", "pk": 4, "fields": { "name": "2D" } },
+  {
+    "model": "games.category",
+    "pk": 5,
+    "fields": { "name": "Pixel Graphics" }
+  },
+  { "model": "games.category", "pk": 6, "fields": { "name": "Free To Play" } },
+  { "model": "games.category", "pk": 7, "fields": { "name": "Shooter" } },
+  { "model": "games.category", "pk": 8, "fields": { "name": "FPS" } },
+  {
+    "model": "games.category",
+    "pk": 9,
+    "fields": { "name": "Open World Survival Craft" }
+  },
+  { "model": "games.category", "pk": 10, "fields": { "name": "Sandbox" } },
+  { "model": "games.category", "pk": 11, "fields": { "name": "Survival" } },
+  { "model": "games.category", "pk": 12, "fields": { "name": "Open World" } },
+  { "model": "games.category", "pk": 13, "fields": { "name": "Story Rich" } },
+  { "model": "games.category", "pk": 14, "fields": { "name": "Western" } },
+  { "model": "games.category", "pk": 15, "fields": { "name": "Adventure" } },
+  { "model": "games.category", "pk": 16, "fields": { "name": "Hero Shooter" } },
+  { "model": "games.category", "pk": 17, "fields": { "name": "Multiplayer" } },
+  { "model": "games.category", "pk": 18, "fields": { "name": "Competitive" } },
+  { "model": "games.category", "pk": 19, "fields": { "name": "Action" } },
+  { "model": "games.category", "pk": 20, "fields": { "name": "Online Co-Op" } },
+  {
+    "model": "games.category",
+    "pk": 21,
+    "fields": { "name": "Social Deduction" }
+  },
+  {
+    "model": "games.category",
+    "pk": 22,
+    "fields": { "name": "Tower Defense" }
+  },
+  { "model": "games.category", "pk": 23, "fields": { "name": "Strategy" } },
+  { "model": "games.category", "pk": 24, "fields": { "name": "Singleplayer" } },
+  { "model": "games.category", "pk": 25, "fields": { "name": "PvP" } },
+  { "model": "games.platform", "pk": 1, "fields": { "name": "Windows" } },
+  { "model": "games.platform", "pk": 2, "fields": { "name": "Linux" } },
+  { "model": "games.platform", "pk": 3, "fields": { "name": "MacOS" } },
   {
     "model": "games.game",
     "pk": 1,
     "fields": {
       "name": "Celeste",
-      "description": "The Best Game Ever!!!",
-      "price": "19.90",
-      "download_count": 12000,
+      "description": "Help Madeline survive her inner demons on her journey to the top of Celeste Mountain, in this super-tight platformer from the creators of TowerFall. Brave hundreds of hand-crafted challenges, uncover devious secrets, and piece together the mystery of the mountain.",
+      "price": "19.50",
       "publisher": 1,
-      "release_date": "2025-02-10T09:28:44.924Z",
-      "image": "game_images/Screenshot_6.png",
+      "release_date": "2018-01-25T09:28:44.924Z",
+      "image": "game_images/celeste.png",
       "slug": "celeste",
-      "categories": [1]
+      "categories": [1, 3, 4, 5],
+      "platforms": [1, 2, 3]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 2,
+    "fields": {
+      "name": "Terraria",
+      "description": "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!",
+      "price": "9.75",
+      "publisher": 1,
+      "release_date": "2011-05-16T09:28:44.924Z",
+      "image": "game_images/terraria.png",
+      "slug": "terraria",
+      "categories": [4, 9, 10, 11],
+      "platforms": [1, 2, 3]
     }
   },
   {
     "model": "games.game",
     "pk": 3,
     "fields": {
-      "name": "New Game",
-      "description": "New game description - lorem ipsum dolor a mit\r\nSomething else blah blah blah",
-      "price": "59.90",
-      "download_count": 25670,
-      "publisher": 2,
-      "release_date": "2025-02-11T07:01:01.198Z",
-      "image": "game_images/Screenshot_1.png",
-      "slug": "new-game",
-      "categories": [1]
+      "name": "Among Us",
+      "description": "An online and local party game of teamwork and betrayal for 4-15 players...in space!",
+      "price": "4.49",
+      "publisher": 1,
+      "release_date": "2018-11-16T09:28:44.924Z",
+      "image": "game_images/amongus.png",
+      "slug": "among-us",
+      "categories": [4, 17, 20, 21],
+      "platforms": [1]
     }
   },
   {
     "model": "games.game",
     "pk": 4,
     "fields": {
-      "name": "Google",
-      "description": "asdfsadfasdfasfd",
+      "name": "The Finals",
+      "description": "Join THE FINALS, the world-famous, free-to-play, combat-centered game show! Fight alongside your teammates in virtual arenas that you can alter, exploit, and even destroy. Build your own playstyle in this first-person shooter to win escalating tournaments and lasting fame.",
       "price": "0.00",
-      "download_count": 1,
-      "publisher": 2,
-      "release_date": "2025-02-11T07:22:35.858Z",
-      "image": "game_images/Screenshot_5.png",
-      "slug": "google",
-      "categories": [2, 3, 4]
+      "publisher": 1,
+      "release_date": "2023-12-8T09:28:44.924Z",
+      "image": "game_images/thefinals.png",
+      "slug": "the-finals",
+      "categories": [2, 6, 7, 8, 25],
+      "platforms": [1]
     }
   },
   {
     "model": "games.game",
     "pk": 5,
     "fields": {
-      "name": "Gymnazium, Arabska, 14",
-      "description": "asdfsadfsa",
+      "name": "Bloons TD6",
+      "description": "The Bloons are back and better than ever! Get ready for a massive 3D tower defense game designed to give you hours and hours of the best strategy gaming available.",
+      "price": "13.79",
+      "publisher": 1,
+      "release_date": "2018-12-18T09:28:44.924Z",
+      "image": "game_images/bloons.png",
+      "slug": "bloons-td6",
+      "categories": [17, 22, 23, 24],
+      "platforms": [1, 3]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 6,
+    "fields": {
+      "name": "Counter-Strike 2",
+      "description": "For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.",
       "price": "0.00",
-      "download_count": 10000,
-      "publisher": 2,
-      "release_date": "2025-02-11T09:29:02.365Z",
-      "image": "game_images/Screenshot_5_ZvBsSZP.png",
-      "slug": "gymnazium-arabska-14",
-      "categories": [1, 3]
+      "publisher": 1,
+      "release_date": "2012-08-21T09:28:44.924Z",
+      "image": "game_images/cs2.png",
+      "slug": "counter-strike-2",
+      "categories": [7, 8, 17, 18, 19],
+      "platforms": [1, 2]
     }
   },
   {
     "model": "games.game",
     "pk": 7,
     "fields": {
-      "name": "The Finals",
-      "description": "The best game ever!!! (maybe)",
+      "name": "Overwatch 2",
+      "description": "Overwatch 2 is a critically acclaimed, team-based shooter game set in an optimistic future with an evolving roster of heroes. Team up with friends and jump in today.",
       "price": "0.00",
-      "download_count": 10000000,
-      "publisher": 3,
-      "release_date": "2025-02-11T12:33:16.734Z",
-      "image": "game_images/thefinals_WbXkZ69.png",
-      "slug": "the-finals",
-      "categories": [2]
+      "publisher": 1,
+      "release_date": "2022-10-04T09:28:44.924Z",
+      "image": "game_images/overwatch2.png",
+      "slug": "overwatch-2",
+      "categories": [6, 8, 16, 17, 19],
+      "platforms": [1]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 8,
+    "fields": {
+      "name": "Red Dead Redemption 2",
+      "description": "Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang, on the run across America at the dawn of the modern age. Also includes access to the shared living world of Red Dead Online.",
+      "price": "59.99",
+      "publisher": 1,
+      "release_date": "2019-12-05T09:28:44.924Z",
+      "image": "game_images/rdr.png",
+      "slug": "red-dead-redemption-2",
+      "categories": [12, 13, 14, 15],
+      "platforms": [1]
     }
   }
 ]
