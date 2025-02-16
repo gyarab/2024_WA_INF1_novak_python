@@ -21,10 +21,9 @@
 
   <h2 class="text-center mt-5">Featured Games</h2>
 
-  <!-- Ensuring proper alignment for 3-column layout -->
   <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for game in featured_games %}
-    <div class="col">{% include 'core/game_card.html' %}</div>
+    <div class="col">{% include 'games/game_card.html' %}</div>
     {% endfor %}
   </div>
 </div>

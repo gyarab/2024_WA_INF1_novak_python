@@ -3,7 +3,7 @@
   <img src="{{ game.image.url }}" class="card-img-top" alt="{{ game.name }}" />
   {% else %}
   <img
-    src="https://via.placeholder.com/300x200"
+    src="https://i.pravatar.cc/300"
     class="card-img-top"
     alt="Default Game Image"
   />
@@ -26,5 +26,21 @@
     <a href="{% url 'game_detail' game.slug %}" class="btn btn-primary mt-auto"
       >View Details</a
     >
+  </div>
+
+  <div
+    class="card-footer bg-light text-muted d-flex justify-content-between align-items-center"
+  >
+    <small>Publisher: {{ game.publisher }}</small>
+    {% if user == game.publisher %}
+    <div>
+      <a href="{% url 'edit_game' game.slug %}" class="btn btn-sm btn-warning"
+        >Edit</a
+      >
+      <a href="{% url 'delete_game' game.slug %}" class="btn btn-sm btn-danger"
+        >Delete</a
+      >
+    </div>
+    {% endif %}
   </div>
 </div>

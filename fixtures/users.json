@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$870000$oLXKJN34u40mcEoBbZFrmf$uU4Lb3cq9NJLH5kVo0JFHWmXVpHelE363BvxxkncPx4=",
-      "last_login": "2025-02-11T12:42:16.525Z",
+      "last_login": "2025-02-16T20:52:33.213Z",
       "is_superuser": true,
       "username": "admin",
       "first_name": "",
@@ -13,7 +13,7 @@
       "is_staff": true,
       "is_active": true,
       "date_joined": "2025-02-10T09:26:26.623Z",
-      "profile_picture": "",
+      "profile_picture": "profile_pictures/Music_logo.png",
       "groups": [],
       "user_permissions": []
     }
@@ -22,8 +22,8 @@
     "model": "users.user",
     "pk": 2,
     "fields": {
-      "password": "pbkdf2_sha256$870000$c8pDRDMZ4Qtu8fxe78hAxE$iVxjQcOTy4ItWGbOjKrLIN3aGoScfBELW0wSKbNAeiE=",
-      "last_login": "2025-02-13T09:54:11.339Z",
+      "password": "pbkdf2_sha256$870000$WSeav0Vz3kncXyVHWkYAa1$KVcekl9rFdq9gxC6TMDjr5rlfVDtA2hp/dk6VDGEIek=",
+      "last_login": "2025-02-16T21:07:53.230Z",
       "is_superuser": false,
       "username": "test",
       "first_name": "",
@@ -31,27 +31,8 @@
       "email": "test@mail.com",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "2025-02-10T12:48:29.594Z",
-      "profile_picture": "profile_pictures/Screenshot_6.png",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "users.user",
-    "pk": 3,
-    "fields": {
-      "password": "pbkdf2_sha256$870000$d3kkkvnGEVIVYFQpwto7nB$TvfENiQM1pl9LzAjS9ohEHu/CBqn6DgpIQFc+X9bspA=",
-      "last_login": "2025-02-11T12:31:37.737Z",
-      "is_superuser": false,
-      "username": "ily_tracer_",
-      "first_name": "",
-      "last_name": "",
-      "email": "test@example.us",
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2025-02-11T12:31:36.965Z",
-      "profile_picture": "profile_pictures/container2.png",
+      "date_joined": "2025-02-16T21:07:52.372Z",
+      "profile_picture": "profile_pictures/profile.jpg",
       "groups": [],
       "user_permissions": []
     }

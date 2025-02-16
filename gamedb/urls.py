@@ -27,5 +27,4 @@ urlpatterns = [
     path('reviews/', include('reviews.urls')),
 ]
 
-if settings.DEBUG:  # Only for development
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
