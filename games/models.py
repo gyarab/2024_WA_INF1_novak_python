@@ -27,6 +27,9 @@ class Game(models.Model):
     image = models.ImageField(upload_to='game_images/', null=True, blank=True)
     slug = models.SlugField(unique=True, blank=True)
     platforms = models.ManyToManyField(Platform)
+    ip_address = models.GenericIPAddressField(null=True, blank=True)
+    user_agent = models.CharField(max_length=255, null=True, blank=True)
+    submission_time = models.DateTimeField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:

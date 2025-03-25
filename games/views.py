@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Game, Category
 from .forms import GameForm
+from django.utils import timezone
 
 def game_list(request):
     games = Game.objects.all()
@@ -24,6 +25,9 @@ def add_game(request):
         if form.is_valid():
             game = form.save(commit=False)
             game.publisher = request.user
+            game.ip_address = request.META.get('REMOTE_ADDR')
+            game.user_agent = request.META.get('HTTP_USER_AGENT')
+            game.submission_time = timezone.now()
             game.save()
             form.save_m2m()
             return redirect('game_list')
